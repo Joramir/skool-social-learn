@@ -24,9 +24,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-skool rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+              <span className="text-white font-bold text-lg">P</span>
             </div>
-            <span className="text-xl font-bold gradient-text">SkoolApp</span>
+            <span className="text-xl font-bold gradient-text">Plataforma maestra</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -6,6 +6,22 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 
+interface FormData {
+  fullName: string;
+  email: string;
+  document: string;
+  password: string;
+  confirmPassword: string;
+}
+
+interface Errors {
+  fullName?: string;
+  email?: string;
+  document?: string;
+  password?: string;
+  confirmPassword?: string;
+}
+
 const Register = () => {
   const { toast } = useToast();
   const [showPassword, setShowPassword] = useState(false);
@@ -13,7 +29,7 @@ const Register = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
     document: '',
@@ -21,10 +37,10 @@ const Register = () => {
     confirmPassword: ''
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Errors>({});
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: Errors = {};
 
     if (!formData.fullName.trim()) {
       newErrors.fullName = 'El nombre completo es obligatorio';
@@ -54,7 +70,7 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (validateForm()) {
@@ -80,10 +96,10 @@ const Register = () => {
     }
   };
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
+      setErrors(prev => ({ ...prev, [field]: undefined }));
     }
   };
 
@@ -96,7 +112,7 @@ const Register = () => {
               <Check className="text-white" size={32} />
             </div>
             <h2 className="text-2xl font-bold mb-4 gradient-text">
-              ¡Bienvenido a SkoolApp!
+              ¡Bienvenido a Plataforma maestra!
             </h2>
             <p className="text-gray-600 mb-6">
               Tu registro ha sido completado exitosamente. Ahora puedes acceder a todos nuestros cursos y funcionalidades.

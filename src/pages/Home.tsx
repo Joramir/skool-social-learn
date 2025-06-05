@@ -42,7 +42,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-cyan-600/10"></div>
         <div className="relative max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-bounce-in">
-            <span className="gradient-text">SkoolApp</span>
+            <span className="gradient-text">Plataforma maestra</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 animate-fade-in">
             La plataforma educativa social que transforma tu manera de aprender
