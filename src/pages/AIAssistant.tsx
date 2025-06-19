@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Bot, Send, Lightbulb, User, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -143,7 +144,7 @@ const AIAssistant = () => {
               </CardHeader>
               <CardContent className="flex-1 flex flex-col p-0">
                 {/* Messages */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
                   {messages.map((message) => (
                     <div
                       key={message.id}
