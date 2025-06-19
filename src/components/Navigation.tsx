@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, User, Book, MessageSquare, FileText, Menu, X } from 'lucide-react';
+import { Home, User, Book, MessageSquare, FileText, Bot, Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,6 +12,7 @@ const Navigation = () => {
     { path: '/register', label: 'Inscribirse', icon: User },
     { path: '/training', label: 'Capacitación', icon: Book },
     { path: '/social', label: 'Red Social', icon: MessageSquare },
+    { path: '/ai-assistant', label: 'IA Asistente', icon: Bot },
     { path: '/pqr', label: 'PQR', icon: FileText },
   ];
 

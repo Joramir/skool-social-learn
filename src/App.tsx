@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Training from "./pages/Training";
 import Social from "./pages/Social";
+import AIAssistant from "./pages/AIAssistant";
 import PQR from "./pages/PQR";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/register" element={<Register />} />
             <Route path="/training" element={<Training />} />
             <Route path="/social" element={<Social />} />
+            <Route path="/ai-assistant" element={<AIAssistant />} />
             <Route path="/pqr" element={<PQR />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
